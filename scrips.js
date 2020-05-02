@@ -2,7 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const pincel = { 
         ativo: false,
-        pos: {x:0, y:0},
+        pos: { 
+            x:0, 
+            y:0
+        },
         posAnterior: null
     }
 
@@ -21,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         contexto.moveTo(linha.posAnterior.x, linha.posAnterior.y)
         contexto.lineTo(linha.pos.x, linha.pos.y)
         contexto.stroke()
-
     }
 
     tela.onmousedown = (evento) => {pincel.ativo = true}
